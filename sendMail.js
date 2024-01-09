@@ -7,10 +7,9 @@ const transporter = nodemailer.createTransport({
     secure: false,
     auth: {
       user: 'driveoneforcad@gmail.com',
-      pass: 'spqw tfqb tcty jxil',
+      pass: process.env.USERPASSO + ' ' + process.env.USERPASST + ' ' + process.env.USERPASSTR  + ' ' + process.env.USERPASSFR
     },
   });
-
   const SENDMAIL = async (mailDetails, callback) => {
     try {
       const info = await transporter.sendMail(mailDetails)
