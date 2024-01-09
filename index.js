@@ -23,7 +23,7 @@ app.get('/', (req, res) => {
     res.send("listening post");
 });
 
-app.post('/post', (req, res) => {//{ data:{}}
+app.post('/post', (req, res) => {//{{}}
     let opt = req.body;
     if (valid(req)) {
       SENDMAIL(opt , (d)=>{
