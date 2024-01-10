@@ -32,7 +32,7 @@ app.post('/post', (req, res) => {//{{}}
       });
     }
     else{
-      res.send(aler)
+      res.send({aler , da: req.hostname})
     }
 });
 app.post('/postarray', (req, res) => { // {data:[{},{}]}
