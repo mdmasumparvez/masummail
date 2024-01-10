@@ -15,7 +15,7 @@ app.use(cors(corsOptions));
 app.use(express.json());
 //app.use(express.urlencoded({extended: true}));
 
-const valid = (req)=>{ return (req.hostname === "mealkhatamasum.web.app") || (req.hostname === "localhost");}
+const valid = true;// (req)=>{ return (req.header('Origin') === "http://localhost:3000") || (req.header('Origin') === "https://mealkhata.web.app");}
 const aler = 'Your are not valied user!';
 
 app.get('/', (req, res) => {
@@ -32,7 +32,7 @@ app.post('/post', (req, res) => {//{{}}
       });
     }
     else{
-      res.send({aler , da: req.hostname})
+      res.send(aler)
     }
 });
 app.post('/postarray', (req, res) => { // {data:[{},{}]}
